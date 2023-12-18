@@ -3,12 +3,60 @@
 <head>
     <title>Variables de Entorno</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 60%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>Información de Entorno</h1>
-    <p>Usuario: {{ user.user }}</p>
-    <p>Apellido: {{ user.apellido }}</p>
-    <p>Número de visitas: {{ n_visitas }}</p>
-    <p>Hostname: {{ server }}</p>
+    <body>
+    <div class="header">
+        <h1>Encabezado con sombras</h1>
+    </div>
+    <div class="container">
+        <h2>Información de Entorno</h2>
+        <table>
+            <tr>
+                <th>Variable</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Usuario</td>
+                <td>{{ user.user }}</td>
+            </tr>
+            <tr>
+                <td>Apellido</td>
+                <td>{{ user.apellido }}</td>
+            </tr>
+            <tr>
+                <td>Número de visitas</td>
+                <td>{{ n_visitas }}</td>
+            </tr>
+            <tr>
+                <td>Hostname</td>
+                <td>{{ server }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
 </body>
 </html>
+
